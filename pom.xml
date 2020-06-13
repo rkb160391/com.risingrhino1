@@ -38,7 +38,7 @@
 	</dependencies>
 
 	<build>
-                <finalName>risingrhino</finalName>
+        <finalName>risingrhino</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
