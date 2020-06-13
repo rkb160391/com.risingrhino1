@@ -1,0 +1,38 @@
+<!-- Toolbar -->
+<mat-toolbar color="primary" class="header">
+  <div>Rising Rhino</div>
+  <span class="fill-remaining-space"></span>
+  <span class="nav-tool-items">
+    <a [routerLink]="['']" mat-icon-button>
+      <mat-icon>home</mat-icon>
+    </a>
+    <a mat-button [routerLink]="['about']">About</a>
+    <button mat-button [matMenuTriggerFor]="belowMenu">Products</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item [routerLink]="['footwear']">Footwear</button>
+      <button mat-menu-item [routerLink]="['bags']">Bags</button>
+      <button mat-menu-item [routerLink]="['accessories']">Accessories</button>
+    </mat-menu>
+    <a mat-button [routerLink]="['contact']">Contact</a>
+  </span>
+</mat-toolbar>
+<router-outlet></router-outlet>
+<mat-grid-list cols="1" rowHeight="100px">
+  <mat-grid-tile style="background: #2c2c2c;">
+    <div class="example-button-container" style="margin-right: 5px;">
+      <button mat-mini-fab aria-label="Example icon button with a home icon">
+        <mat-icon>contactless</mat-icon>
+      </button>
+    </div>
+    <div class="example-button-container">
+      <button mat-mini-fab aria-label="Example icon button with a home icon">
+        <mat-icon>contactless</mat-icon>
+      </button>
+    </div>
+    <div class="example-button-container"style="margin-left: 5px;">
+      <button mat-mini-fab aria-label="Example icon button with a home icon">
+        <mat-icon>contactless</mat-icon>
+      </button>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

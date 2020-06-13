@@ -1,0 +1,21 @@
+<p-carousel [value]="productList" [numVisible]="1" [numScroll]="1" [circular]="true"
+    [responsiveOptions]="responsiveOptions">
+    <p-header>
+        <div class="example-label wrapper" style="margin-top: 15px;">
+            <!-- <h1>Our Collection</h1> -->
+        </div>
+    </p-header>
+    <ng-template let-shoe pTemplate="item">
+        <mat-card class="example-card">
+            <mat-card-content>
+                <img mat-card-image [src]="shoe.src" alt="">
+                <div class="centered">
+                    <!-- <h1 style="font-weight: bold;">ABOUT US</h1> -->
+                    <div class="example-button-container wrapper">
+                        <button mat-raised-button enquiry color="accent" [routerLink]="['enquiry']">Enquiry</button>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </ng-template>
+</p-carousel>
